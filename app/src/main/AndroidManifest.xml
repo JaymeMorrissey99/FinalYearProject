@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.modeluapp">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ModeluApp">
+        <activity
+            android:name=".Pay"
+            android:exported="false" />
+        <activity
+            android:name=".ViewUserProfile"
+            android:exported="true" />
+        <activity
+            android:name=".Payment"
+            android:exported="true" />
+        <activity
+            android:name=".FinishJob"
+            android:exported="true" />
+        <activity
+            android:name=".MyClients"
+            android:exported="true" />
+        <activity
+            android:name=".EditProfileInformation"
+            android:exported="true" />
+        <activity
+            android:name=".MyJobs"
+            android:exported="true" />
+        <activity
+            android:name=".MyPhotos"
+            android:exported="true" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="true" />
+        <activity
+            android:name=".MapActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_maps"></activity>
+        <activity
+            android:name=".CommentsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ViewMyJobDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ViewApplicationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ViewJobActivity"
+            android:exported="true" />
+        <activity
+            android:name=".NewJobActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CompanyMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ViewMyPostActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PostActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".ViewLinkActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CompanySetUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ModelSetUpActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".OptionsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegisterCompanyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegisterModelActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

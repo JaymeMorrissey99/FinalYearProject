@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backg"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/m"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/m" />
+
+    <ImageView
+        android:id="@+id/u"
+        android:layout_width="96dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/m"
+        android:layout_marginLeft="152dp"
+        android:src="@drawable/u" />
+
+
+    <EditText
+        android:id="@+id/e"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/input"
+        android:hint="Email"
+        android:padding="10dp"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/p"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/e"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/input"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:padding="10dp"
+        android:textColorHint="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginBtn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/p"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/button"
+        android:text="Login">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerBtn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/loginBtn"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button"
+        android:text="Register">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/forgotPasswordBtn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/registerBtn"-->
+<!--        android:layout_marginLeft="100dp"-->
+<!--        android:layout_marginTop="79dp"-->
+<!--        android:layout_marginRight="100dp"-->
+<!--        android:text="Forgot Password?"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textFontWeight="700" />-->
+
+</RelativeLayout>

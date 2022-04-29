@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileInformation">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profilesecondlayer"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profilefirstlayer"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iprofilePicture"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/profiledetailsicon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profilesecondlayer"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="50px"
+            android:paddingBottom="10px">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Information"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/profilesecondlayer"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="50px"
+        >
+
+
+        <TextView
+            android:id="@+id/userType"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/input"
+            android:padding="15dp"
+            android:textColorHint="@color/black" />
+        <EditText
+            android:id="@+id/iUsername"
+            android:drawableLeft="@drawable/editprofileicon"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/input"
+            android:padding="10dp"
+            android:textColorHint="@color/black" />
+
+
+        <EditText
+            android:id="@+id/iFullname"
+            android:drawableLeft="@drawable/ic_profile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/registerEmail"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:background="@drawable/input"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/detailsemail"
+            android:drawableLeft="@drawable/mail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/input"
+            android:padding="10dp"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/ibio"
+            android:drawableLeft="@drawable/bioicon"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/registerEmail"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:background="@drawable/input"
+            android:textColorHint="@color/black" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/iUpdateDetails"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/registerPassword"
+            android:background="@drawable/button"
+            android:text="Update"
+            >
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

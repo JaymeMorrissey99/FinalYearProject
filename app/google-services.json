@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "809356541404",
+    "project_id": "mapp-c69ea",
+    "storage_bucket": "mapp-c69ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809356541404:android:f48dce41c3de812999e319",
+        "android_client_info": {
+          "package_name": "com.example.modeluapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809356541404-4pllchc5csbg22i1pcrirtsv5vu0adl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcO90bBF1zLNkQuAPjdMJkz-vUT2MgRBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809356541404-4pllchc5csbg22i1pcrirtsv5vu0adl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
