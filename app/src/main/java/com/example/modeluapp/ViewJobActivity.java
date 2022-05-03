@@ -72,7 +72,7 @@ public class ViewJobActivity extends AppCompatActivity {
 //            }
 //        });
 
-        Toast.makeText(this, userId, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, userId, Toast.LENGTH_SHORT).show();
 
 //        currentState = "nothing";
 //        recyclerView = findViewById(R.id.jobRV);
@@ -318,7 +318,7 @@ public class ViewJobActivity extends AppCompatActivity {
 
     private void LoadJob() {
 
-        Toast.makeText(this, "" + senderId, Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this, "" + senderId, Toast.LENGTH_SHORT).show();
 
         databaseReference.child(jobid).addValueEventListener(new ValueEventListener() {
             @Override

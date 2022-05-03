@@ -88,7 +88,6 @@ public class ViewLinkActivity extends AppCompatActivity {
 
         cancelLinkbtn.setVisibility(View.INVISIBLE);
 
-
         //CheckUserExistence(userId);
         if (!senderId.equals(userId)) {
             requestLinkbtn.setOnClickListener(new View.OnClickListener() {
@@ -550,6 +549,7 @@ public class ViewLinkActivity extends AppCompatActivity {
                     userName.setText(username);
                     userType.setText(userT);
 
+                    currentState = "nothing";
                     maintananceButtons();
                 }
             }
@@ -560,7 +560,7 @@ public class ViewLinkActivity extends AppCompatActivity {
             }
         });
 
-        currentState = "nothing";
+        //currentState = "nothing";
     }
 
     private void maintananceButtons() {
@@ -589,24 +589,28 @@ public class ViewLinkActivity extends AppCompatActivity {
                             }
                         });
                     }
-                } else {
-                    linkedRef.child(senderId).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if (snapshot.hasChild(userId)) {
-                                currentState = "linked";
-                                requestLinkbtn.setText("Unlink");
+                } else if(!snapshot.exists()){
+                    checkLinked();
+                }
+            }
 
-                                cancelLinkbtn.setVisibility(View.INVISIBLE);
-                                cancelLinkbtn.setEnabled(false);
-                            }
-                        }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+    }
 
-                        }
-                    });
+    private void checkLinked() {
+        linkedRef.child(senderId).child("links").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.hasChild(userId)) {
+                    currentState = "linked";
+                    requestLinkbtn.setText("Unlink");
+
+                    cancelLinkbtn.setVisibility(View.INVISIBLE);
+                    cancelLinkbtn.setEnabled(false);
                 }
             }
 

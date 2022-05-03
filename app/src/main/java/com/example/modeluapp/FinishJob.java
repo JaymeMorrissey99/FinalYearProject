@@ -226,54 +226,6 @@ public class FinishJob extends AppCompatActivity {
     }
 
 
-//    private void revokeContract() {
-//
-//
-//        Query q = jobsRef.orderByChild("jobId").equalTo(jobid);
-//        q.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                for(DataSnapshot d : snapshot.getChildren()){
-//                    String id = d.child("companyId").getValue().toString();
-//                    if(companyUser.equalsIgnoreCase(id)) {
-//                        d.getRef().removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-//                            @Override
-//                            public void onComplete(@NonNull Task<Void> task) {
-//                                if (task.isSuccessful()) {
-////                                    acceptApplication.setEnabled(true);
-////                                    currentState = "nothing";
-////                                    acceptApplication.setText("Accept Application");
-////
-////                                    declineApplication.setVisibility(View.VISIBLE);
-////                                    declineApplication.setEnabled(true);
-//                                }
-//                            }
-//                        });
-//                    }
-////                    String applicationid = snapshot.getKey();
-////                    ref.child(applicationid).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-////                        @Override
-////                        public void onComplete(@NonNull Task<Void> task) {
-////                            if(task.isSuccessful()){
-////                                applytoJobbtn.setEnabled(true);
-////                                currentState = "nothing";
-////                                applytoJobbtn.setText("Apply");
-////
-////                                canceljobBtn.setVisibility(View.INVISIBLE);
-////                                canceljobBtn.setEnabled(false);
-////                            }
-////                        }
-////                    });
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-//    }
-
     private void LoadDetails() {
 
         userRef.child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
@@ -417,7 +369,7 @@ public class FinishJob extends AppCompatActivity {
                             EphericalKey = object.getString("id");
 
                             getClientSecret(customerID, EphericalKey);
-                            Toast.makeText(FinishJob.this, EphericalKey, Toast.LENGTH_SHORT).show();
+                         //   Toast.makeText(FinishJob.this, EphericalKey, Toast.LENGTH_SHORT).show();
 
 
                         } catch (JSONException e) {
@@ -465,7 +417,7 @@ public class FinishJob extends AppCompatActivity {
                             ClientSecret = object.getString("client_secret");
 
                             //getClientSecret(customerID, EphericalKey);
-                            Toast.makeText(FinishJob.this, ClientSecret, Toast.LENGTH_SHORT).show();
+                         //   Toast.makeText(FinishJob.this, ClientSecret, Toast.LENGTH_SHORT).show();
 
 
 

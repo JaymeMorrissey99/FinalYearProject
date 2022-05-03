@@ -49,8 +49,6 @@ public class CommentsActivity extends AppCompatActivity {
     private CommentAdaptor commentAdaptor;
     private List<Comment> cList;
 
-//    FirebaseRecyclerOptions<Comment> commentoptions;
-//    FirebaseRecyclerAdapter<Comment, CommentVH> commentadaptor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,31 +108,6 @@ public class CommentsActivity extends AppCompatActivity {
             }
         });
     }
-
-//    public void readComments(){
-//        Query q = commentRef.orderByChild(postId);
-//        commentoptions = new FirebaseRecyclerOptions.Builder<Comment>().setQuery(q, Comment.class).build();
-//        commentadaptor = new FirebaseRecyclerAdapter<Comment, CommentVH>(commentoptions) {
-//            @Override
-//            protected void onBindViewHolder(@NonNull CommentVH holder, int position, @NonNull Comment model) {
-//                holder.commenttext.setText(model.getComment());
-//                String comment = model.getComment();
-//                holder.cusername.setText(model.getSenderId());
-//                Toast.makeText(getApplicationContext(), ""+ comment, Toast.LENGTH_SHORT).show();
-//            }
-//
-//            @NonNull
-//            @Override
-//            public CommentVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.comment_layout, parent, false);
-//                return new CommentVH(view);
-//            }
-//        };
-//        commentadaptor.startListening();
-//        commentadaptor.notifyDataSetChanged();
-//        cmtRV.setAdapter(commentadaptor);
-//
-//    }
 
     private void comment() {
         String u = mUser.getUid();

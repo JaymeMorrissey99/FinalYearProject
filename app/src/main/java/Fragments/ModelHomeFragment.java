@@ -22,11 +22,17 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import Adaptor.CompanyVP;
 import Adaptor.ModelVP;
@@ -50,11 +56,12 @@ public class ModelHomeFragment extends Fragment {
 //    ModelVP mpagerAdaptor;
 //    Fragment selectFragmnet = null;
 
-    DatabaseReference databaseReference, jobref;
+    DatabaseReference databaseReference, jobref, linkedRef;
     FirebaseUser mUser;
     FirebaseAuth mAuth;
     RecyclerView jobrv;
     String jobKey1, jobUserId;
+    private List<String> linkList;
 
     FirebaseRecyclerOptions<Jobs>joptions;
     FirebaseRecyclerAdapter<Jobs, JobViewHolder>jadaptor;
@@ -69,16 +76,40 @@ public class ModelHomeFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Joblistings");
-
+        String u = mUser.getUid();
+        linkedRef = FirebaseDatabase.getInstance().getReference().child("Links").child(u).child("links");
 
         jobrv = view.findViewById(R.id.joblistingRV);
         jobrv.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        //checkLinks();
         LoadJobs("");
 
 
         return view;
     }
+
+//    private void checkLinks() {
+//        linkList = new ArrayList<>();
+//        linkedRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                linkList.clear();
+//                if(snapshot.exists()){
+//                    for(DataSnapshot d: snapshot.getChildren()){
+//                        linkList.add(d.getKey());
+//                        //   Toast.makeText(getContext(), ""+followingList.toString(), Toast.LENGTH_SHORT).show();
+//                        LoadJobs(linkList);
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
+//    }
 
     private void LoadJobs(String s) {
 

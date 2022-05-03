@@ -50,20 +50,10 @@ import com.google.maps.PendingResult;
 import com.google.maps.model.DirectionsResult;
 import com.squareup.okhttp.OkHttpClient;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import DirectionHelpers.FetchURL;
-import DirectionHelpers.TaskLoadedCallback;
-
-
-//import DirectionHelpers.FetchURL;
-//import DirectionHelpers.TaskLoadedCallback;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback{
 
@@ -133,11 +123,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        markerOptions.add(myLocation);
 //        markerOptions.add(destination);
 
-
-//        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-//        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-//                .findFragmentById(R.id.map);
-//        mapFragment.getMapAsync(this);
     }
 
     private void directions() {
@@ -153,10 +138,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //                .method("GET", null)
 //                .build();
 //        Response response = client.newCall(request).execute();
-
-
-
-
 
     }
 
@@ -289,48 +270,4 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //            geoApiContext = new GeoApiContext.Builder().apiKey(getString(R.string.google_maps_key)).build();
 //        }
     }
-
-//    @Override
-//    public void onTaskDone(Object... values) {
-//        if(polyline != null)
-//            polyline.remove();
-//
-//        polyline = mMap.addPolyline((PolylineOptions) values[0]);
-//    }
-
-//    private void calculateDirections(MarkerOptions marker){
-//        Log.d(TAG, "calculateDirections: calculating directions.");
-//
-//        com.google.maps.model.LatLng destination = new com.google.maps.model.LatLng(
-//                marker.getPosition().latitude,
-//                marker.getPosition().longitude
-//        );
-//        DirectionsApiRequest directions = new DirectionsApiRequest(geoApiContext);
-//
-//        directions.alternatives(true);
-//        directions.origin(
-//                new com.google.maps.model.LatLng(
-//                        curLocation.getLatitude(),
-//                        curLocation.getLongitude()
-//                )
-//        );
-//        Log.d(TAG, "calculateDirections: destination: " + destination.toString());
-//        directions.destination(destination).setCallback(new PendingResult.Callback<DirectionsResult>() {
-//            @Override
-//            public void onResult(DirectionsResult result) {
-//                Log.d(TAG, "calculateDirections: routes: " + result.routes[0].toString());
-//                Log.d(TAG, "calculateDirections: duration: " + result.routes[0].legs[0].duration);
-//                Log.d(TAG, "calculateDirections: distance: " + result.routes[0].legs[0].distance);
-//                Log.d(TAG, "calculateDirections: geocodedWayPoints: " + result.geocodedWaypoints[0].toString());
-//            }
-//
-//            @Override
-//            public void onFailure(Throwable e) {
-//                Log.e(TAG, "calculateDirections: Failed to get directions: " + e.getMessage() );
-//
-//            }
-//        });
-//    }
-
-
 }

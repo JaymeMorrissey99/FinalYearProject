@@ -35,14 +35,8 @@ public class CompanyMainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser firebaseUser;
     DatabaseReference mRef, postRef;
-    //FirebaseRecyclerAdapter<Post, MyViewHolder> adapter;
-    //FirebaseRecyclerOptions<Post> options;
-    //StorageReference postImgRef;
     RecyclerView recyclerView;
-    //FloatingActionButton addjob;
-    //TabLayout tabLayout;
-    //ViewPager2 viewPager2;
-    //CompanyVP pagerAdaptor;
+
     Fragment selectedFrag= null;
 
     @Override
@@ -83,7 +77,6 @@ public class CompanyMainActivity extends AppCompatActivity {
                         selectedFrag = new CompanyHomeFragment();
 
                 }
-                //ge
                 getSupportFragmentManager().beginTransaction().replace(R.id.cfrag_containter, selectedFrag).commit();
                 return true;
             }

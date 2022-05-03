@@ -120,14 +120,8 @@ public class EditProfileInformation extends AppCompatActivity {
                         iUsername.setText(uName);
                         iFullname.setText(fName);
                         ibio.setText(bio);
-
-//                    propic = findViewById(R.id.iprofilePicture);
-//                    userType = findViewById(R.id.userType);
-//                    iUsername = findViewById(R.id.iUsername);
-//                    iFullname = findViewById(R.id.iFullname);
-//                    detailsemail = findViewById(R.id.detailsemail);
-//                    ibio = findViewById(R.id.ibio);
-                    //}
+                        detailsemail.setText("vincentB@gmail.com");
+                        // save profile email on set up
                 }
             }
 
