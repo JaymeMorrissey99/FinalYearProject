@@ -48,7 +48,7 @@ public class CompanyProfile extends Fragment {
 
     CircleImageView profileImg;
     EditText inputfullName, inputBio;
-    TextView uType, inputUsername, ltotal, ptotal;
+    TextView uType, inputUsername, ltotal, ptotal, jobCount;
     ImageView lgout;
     Button myPbtn, myclientsBtn, editPbtn, logoutbtn;
     int linkCount=0;
@@ -85,6 +85,8 @@ public class CompanyProfile extends Fragment {
         inputUsername = v.findViewById(R.id.iUsername);
         ltotal = v.findViewById(R.id.linktotal);
 
+        jobCount = v.findViewById(R.id.jobCount);
+        jobCount.setText("2");
         //PROFILE BUTTONS
         myPbtn = v.findViewById(R.id.photoBtn);
         myclientsBtn = v.findViewById(R.id.myclientsBtn);

@@ -69,7 +69,7 @@ public class CompanyApplicationsFragment extends Fragment {
 
         LoadApplications();
 
-        Toast.makeText(getContext(), ""+img, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getContext(), ""+img, Toast.LENGTH_SHORT).show();
 
         return v;
     }
@@ -92,7 +92,7 @@ public class CompanyApplicationsFragment extends Fragment {
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                     if(snapshot.exists()){
                                         img = snapshot.child("image").getValue().toString();
-                                        Toast.makeText(getContext(), ""+img, Toast.LENGTH_SHORT).show();
+                                     //   Toast.makeText(getContext(), ""+img, Toast.LENGTH_SHORT).show();
                                         Picasso.get().load(img).into(holder.profile_i);
                                     }
                                 }

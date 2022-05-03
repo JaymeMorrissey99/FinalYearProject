@@ -50,8 +50,8 @@ public class ViewMyJobDetailsActivity extends AppCompatActivity {
         userId = getIntent().getExtras().get("userKey").toString();
 
 
-        Toast.makeText(getApplicationContext(), "" + userId, Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), "" + jobid, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "" + userId, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "" + jobid, Toast.LENGTH_SHORT).show();
 
         status = findViewById(R.id.Status);
         statValue = findViewById(R.id.sValue);
@@ -215,7 +215,7 @@ public class ViewMyJobDetailsActivity extends AppCompatActivity {
                         }
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(), "SOMETHING WRONG", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
                 }
             }
 

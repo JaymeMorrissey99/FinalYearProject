@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                     finish();
                 }
                 else{
-                    Toast.makeText(LoginActivity.this, "Fehler"+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Fail: "+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });

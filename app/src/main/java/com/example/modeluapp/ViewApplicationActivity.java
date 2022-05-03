@@ -3,6 +3,7 @@ package com.example.modeluapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -72,6 +73,16 @@ public class ViewApplicationActivity extends AppCompatActivity {
         close = findViewById(R.id.x);
         acceptApplication = findViewById(R.id.acceptApplication);
         declineApplication = findViewById(R.id.declineApplication);
+
+        profileImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ViewUserProfile.class);
+                intent.putExtra("ModelID", modelId);
+                startActivity(intent);
+                //Toast.makeText(getApplicationContext(), ""+ pID, Toast.LENGTH_SHORT).show();
+            }
+        });
 
         LoadApplication();
 

@@ -60,6 +60,7 @@ public class CompanyHomeFragment extends Fragment {
         addjob = view.findViewById(R.id.addJob);
         FragmentManager fm = getParentFragmentManager();
         pagerAdaptor = new CompanyVP(fm, getLifecycle());
+        viewPager2.setOffscreenPageLimit(3);
         viewPager2.setAdapter(pagerAdaptor);
 
         addjob.setOnClickListener(new View.OnClickListener() {

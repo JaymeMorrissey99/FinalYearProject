@@ -151,7 +151,7 @@ public class FinishJob extends AppCompatActivity {
                         try {
                             JSONObject object = new JSONObject(response);
                             customerID = object.getString("id");
-                            Toast.makeText(FinishJob.this, customerID, Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(FinishJob.this, customerID, Toast.LENGTH_SHORT).show();
 
                             getEphericalKey(customerID);
 
@@ -308,14 +308,16 @@ public class FinishJob extends AppCompatActivity {
                                     jobtitle = snapshot.child("JobTitle").getValue().toString();
                                     jobdescription = snapshot.child("JobDes").getValue().toString();
                                     joblocation = snapshot.child("JobLocation").getValue().toString();
-                                Toast.makeText(getApplicationContext(), ""+ jobtitle, Toast.LENGTH_SHORT).show();
+                         //       Toast.makeText(getApplicationContext(), ""+ jobtitle, Toast.LENGTH_SHORT).show();
 
                                 Picasso.get().load(image).into(mImg);
                                 Picasso.get().load(userImg).into(cImg);
                                 mNAME.setText(mname);
                                 jTITLE.setText(jobtitle);
+                                mEMAIL.setText("vincentB@gmail.com");
                                 jDESCRIPTION.setText(jobdescription);
                                 jLocation.setText(joblocation);
+
 
                                 maintenanceOfButtons();
                             }

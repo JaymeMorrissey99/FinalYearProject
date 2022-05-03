@@ -43,6 +43,7 @@ public class CompanyMainActivity extends AppCompatActivity {
     //TabLayout tabLayout;
     //ViewPager2 viewPager2;
     //CompanyVP pagerAdaptor;
+    Fragment selectedFrag= null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,14 +54,14 @@ public class CompanyMainActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment selectedFrag= null;
+                //Fragment selectedFrag= null;
                 switch (item.getItemId()){
                     case R.id.home:
-                        Toast.makeText(getApplicationContext(), "Home Selected", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getApplicationContext(), "Home Selected", Toast.LENGTH_SHORT).show();
                         selectedFrag = new CompanyHomeFragment();
                         break;
                     case R.id.search:
-                        Toast.makeText(getApplicationContext(), "Search Selected", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), "Search Selected", Toast.LENGTH_SHORT).show();
                         selectedFrag = new SearchFragment();
                         break;
                     case R.id.addPost:
@@ -69,12 +70,12 @@ public class CompanyMainActivity extends AppCompatActivity {
                         SendToPost();
                         break;
                     case R.id.money:
-                        Toast.makeText(getApplicationContext(), "Settings Selected", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getApplicationContext(), "Settings Selected", Toast.LENGTH_SHORT).show();
                         selectedFrag = new PostFragment();
 
                         break;
                     case R.id.profile:
-                        Toast.makeText(getApplicationContext(), "Profile Selected", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getApplicationContext(), "Profile Selected", Toast.LENGTH_SHORT).show();
                         selectedFrag = new CompanyProfile();
                         break;
 
@@ -82,6 +83,7 @@ public class CompanyMainActivity extends AppCompatActivity {
                         selectedFrag = new CompanyHomeFragment();
 
                 }
+                //ge
                 getSupportFragmentManager().beginTransaction().replace(R.id.cfrag_containter, selectedFrag).commit();
                 return true;
             }

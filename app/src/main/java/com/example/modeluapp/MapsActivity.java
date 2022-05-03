@@ -8,9 +8,11 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Point;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -18,6 +20,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -25,6 +35,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.modeluapp.databinding.ActivityMapsBinding;
@@ -38,12 +49,17 @@ import com.google.maps.GeoApiContext;
 import com.google.maps.PendingResult;
 import com.google.maps.model.DirectionsResult;
 import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import DirectionHelpers.FetchURL;
+import DirectionHelpers.TaskLoadedCallback;
 
 
 //import DirectionHelpers.FetchURL;
@@ -62,6 +78,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     List<MarkerOptions> markerOptions = new ArrayList<>();
     private Polyline polyline;
     private FusedLocationProviderClient fusedLocationProviderClient;
+    //LatLng myLocation;
+
+    private Polyline currentPolyline;
+    private MarkerOptions place1, place2;
+
 
 
     private static final String TAG = "LOCATION";
@@ -85,7 +106,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         location = getIntent().getExtras().get("location").toString();
         getLocationPermission();
-        Toast.makeText(this, ""+location, Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this, ""+location, Toast.LENGTH_SHORT).show();
 
 
         directionBnt = findViewById(R.id.directionBnt);
@@ -261,7 +282,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void initMap() {
-                SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 //        if(geoApiContext == null){
@@ -310,5 +331,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //            }
 //        });
 //    }
+
 
 }

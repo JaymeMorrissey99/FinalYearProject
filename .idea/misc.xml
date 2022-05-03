@@ -10,6 +10,7 @@
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/drawable-v24/ic_commentpost.xml" value="0.19074074074074074" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/drawable-v24/ic_likebtn.xml" value="0.29074074074074074" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/drawable-v24/ic_profile.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/drawable-v24/input.xml" value="0.136" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/drawable-v24/modeldetails.xml" value="0.1388888888888889" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/drawable-v24/myjobsicon.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/drawable-v24/posticon.xml" value="0.19166666666666668" />
@@ -81,6 +82,7 @@
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/layout/profilepost.xml" value="0.1716485507246377" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/layout/search_user.xml" value="0.15489130434782608" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/layout/useritem.xml" value="0.25" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/layout/viewuserprofile.xml" value="0.15" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/menu/bottom_nav.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/menu/logout.xml" value="0.346875" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/ModeluApp2/app/src/main/res/menu/search.xml" value="0.35104166666666664" />

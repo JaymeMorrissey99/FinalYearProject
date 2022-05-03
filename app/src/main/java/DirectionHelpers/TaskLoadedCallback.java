@@ -1,5 +1,5 @@
-//package DirectionHelpers;
-//
-//public interface TaskLoadedCallback {
-//    void onTaskDone(Object... values);
-//}
+package DirectionHelpers;
+
+public interface TaskLoadedCallback {
+    void onTaskDone(Object... values);
+}

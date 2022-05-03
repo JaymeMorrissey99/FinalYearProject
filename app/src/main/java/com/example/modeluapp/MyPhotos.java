@@ -79,10 +79,13 @@ public class MyPhotos extends AppCompatActivity {
         rv.setHasFixedSize(true);
 //        LinearLayoutManager linearLayoutManager = new GridLayoutManager(getApplicationContext(), 3);
 //        rv.setLayoutManager(linearLayoutManager);
-        //rv.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+//        rv.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+//
+//        LinearLayoutManager linearLayoutManager = new GridLayoutManager(getApplicationContext(), 2);
+//        rv.setLayoutManager(linearLayoutManager);
 
-        LinearLayoutManager linearLayoutManager = new GridLayoutManager(getApplicationContext(), 2);
-        rv.setLayoutManager(linearLayoutManager);
+        GridLayoutManager gm = new GridLayoutManager(getApplicationContext(), 2);
+        rv.setLayoutManager(gm);
 
         getPostCount();
         LoadUserDetails();
@@ -151,7 +154,7 @@ public class MyPhotos extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), ViewMyPostActivity.class);
                         intent.putExtra("POSTID", pID);
                         startActivity(intent);
-                        Toast.makeText(getApplicationContext(), ""+ pID, Toast.LENGTH_SHORT).show();
+                     //   Toast.makeText(getApplicationContext(), ""+ pID, Toast.LENGTH_SHORT).show();
                     }
                 });
             }

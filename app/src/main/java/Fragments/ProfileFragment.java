@@ -176,7 +176,7 @@ public class ProfileFragment extends Fragment {
                         Intent intent = new Intent(getContext(), ViewMyPostActivity.class);
                         intent.putExtra("POSTID", pID);
                         startActivity(intent);
-                        Toast.makeText(getContext(), ""+ pID, Toast.LENGTH_SHORT).show();
+                     //   Toast.makeText(getContext(), ""+ pID, Toast.LENGTH_SHORT).show();
                     }
                 });
             }

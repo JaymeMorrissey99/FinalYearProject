@@ -87,7 +87,7 @@ public class PostFragment extends Fragment {
                 if(snapshot.exists()){
                     for(DataSnapshot d: snapshot.getChildren()){
                         followingList.add(d.getKey());
-                        Toast.makeText(getContext(), ""+followingList.toString(), Toast.LENGTH_SHORT).show();
+                     //   Toast.makeText(getContext(), ""+followingList.toString(), Toast.LENGTH_SHORT).show();
                         readPost();
                     }
                 }
